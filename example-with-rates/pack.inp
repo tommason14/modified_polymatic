@@ -1,0 +1,11 @@
+tolerance 2.0
+output pack.xyz
+filetype xyz
+structure stysulf.xyz
+  number 20
+  inside box 0. 0. 0. 40. 40. 40.
+end structure
+structure dvb.xyz
+  number 20
+  inside box 0. 0. 0. 40. 40. 40.
+end structure

@@ -1,0 +1,4 @@
+link LC1,C3 LC2,C3
+charge +0.3 -0.3
+cutoff 6.0
+intra true 5

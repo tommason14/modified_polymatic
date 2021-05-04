@@ -1,0 +1,143 @@
+# 21 step polymer equilibration
+
+# System                                             
+units            real                                
+atom_style       full                                
+dimension        3                                   
+newton           on                                  
+boundary         p p p                               
+                                                     
+# Styles                                             
+atom_style      full                                 
+bond_style      harmonic                             
+angle_style     harmonic                             
+dihedral_style  fourier                              
+improper_style  cvff                                 
+                                                     
+pair_style      lj/charmm/coul/long 9.0 10.0 10.0    
+kspace_style    pppm 0.0001                          
+pair_modify     mix arithmetic                       
+special_bonds   amber                                
+
+# System definition
+read_data ../final.lmps
+
+# Settings
+dielectric 1.0
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+timestep 1.0
+run_style verlet
+
+# Output
+dump 1 all custom 1560000 compress.lammpstrj id xu yu zu vx vy vz ix iy iz
+dump d1 all dcd 5000 traj.dcd
+thermo_style custom step vol temp press etotal evdwl ecoul ebond eangle edihed eimp density
+thermo 1000
+
+# 1
+fix 1 all nvt temp 1000 1000 100
+velocity all create 1000 58447419
+run 50000
+unfix 1
+# 2
+fix 1 all nvt temp ${tk} ${tk} 100
+velocity all scale ${tk}
+run 50000
+unfix 1
+# 3 0.02*Pmax
+fix 1 all npt temp ${tk} ${tk} 100 iso 1000 1000 100
+velocity all scale ${tk}
+run 50000
+unfix 1
+# 4
+fix 1 all nvt temp 1000 1000 100
+velocity all scale 1000
+run 50000
+unfix 1
+# 5
+fix 1 all nvt temp ${tk} ${tk} 100
+velocity all scale ${tk}
+run 100000
+unfix 1
+# 6 0.6*Pmax
+fix 1 all npt temp ${tk} ${tk} 100 iso 30000 30000 100
+velocity all scale ${tk}
+run 50000
+unfix 1
+# 7
+fix 1 all nvt temp 1000 1000 100
+velocity all scale 1000
+run 50000
+unfix 1
+# 8
+fix 1 all nvt temp ${tk} ${tk} 100
+velocity all scale ${tk}
+run 100000
+unfix 1
+# 9 Pmax=50000
+fix 1 all npt temp ${tk} ${tk} 100 iso 50000 50000 100
+velocity all scale ${tk}
+run 50000
+unfix 1
+# 10
+fix 1 all nvt temp 1000 1000 100
+velocity all scale 1000
+run 50000
+unfix 1
+# 11
+fix 1 all nvt temp ${tk} ${tk} 100
+velocity all scale ${tk}
+run 100000
+unfix 1
+# 12 0.5*Pmax
+fix 1 all npt temp ${tk} ${tk} 100 iso 25000 25000 100
+velocity all scale ${tk}
+run 5000
+unfix 1
+# 13 
+fix 1 all nvt temp 1000 1000 100
+velocity all scale 1000
+run 5000
+unfix 1
+# 14
+fix 1 all nvt temp ${tk} ${tk} 100
+velocity all scale ${tk}
+run 10000
+unfix 1
+# 15 0.1*Pmax
+fix 1 all npt temp ${tk} ${tk} 100 iso 5000 5000 100
+velocity all scale ${tk}
+run 5000
+unfix 1
+# 16
+fix 1 all nvt temp 1000 1000 100
+velocity all scale 1000
+run 5000
+unfix 1
+# 17
+fix 1 all nvt temp ${tk} ${tk} 100
+velocity all scale ${tk}
+run 10000
+unfix 1
+# 18 0.01*Pmax
+fix 1 all npt temp ${tk} ${tk} 100 iso 500 500 100
+velocity all scale ${tk}
+run 5000
+unfix 1
+# 19
+fix 1 all nvt temp 1000 1000 100
+velocity all scale 1000
+run 5000
+unfix 1
+# 20
+fix 1 all nvt temp ${tk} ${tk} 100
+velocity all scale ${tk}
+run 10000
+unfix 1
+# 21 Pfinal=1 bar
+fix 1 all npt temp ${tk} ${tk} 100 iso 1 1 100
+velocity all scale ${tk}
+run 800000
+unfix 1
+write_data equil.data

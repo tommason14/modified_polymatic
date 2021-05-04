@@ -1,0 +1,208 @@
+Polymatic Simulated Polymerization
+Parameters
+----------
+Bonds per cycle:           5
+Frequency of MD type 2:    3
+Maximum bond attempts:     20
+Polymerization Loop
+-------------------
+Initialization:
+Step 0
+Step 1
+  Pair: 3.87 A (153,753) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 39
+Step 2
+  Pair: 4.42 A (96,462) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 38
+Step 3
+  Pair: 4.64 A (20,602) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 37
+Step 4
+  Pair: 4.35 A (615,722) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 36
+Step 5
+  Pair: 3.81 A (461,642) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 35
+Step 6
+  Pair: 4.25 A (286,733) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 34
+Step 7
+  Pair: 3.58 A (661,97) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 33
+Step 8
+  Pair: 3.70 A (695,533) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 32
+Step 9
+  Pair: 3.36 A (115,682) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 31
+Step 10
+  Pair: 3.76 A (681,513) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 30
+Step 11
+  Pair: 4.41 A (77,482) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 29
+Step 12
+  Pair: 3.41 A (343,633) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 28
+Step 13
+  Pair: 3.87 A (1,402) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 27
+Step 14
+  Pair: 3.53 A (191,762) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 26
+Step 15
+  Pair: 3.88 A (267,382) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 25
+Step 16
+  Pair: 3.19 A (701,742) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 24
+Step 17
+  Pair: 3.65 A (395,363) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 23
+Step 18
+  Pair: 3.34 A (501,422) (STYSULF - DVB)
+  Attempts: 1
+  Fragments present: 22
+Step 19
+  Pair: 3.83 A (581,2) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 21
+Step 20
+  Pair: 3.82 A (515,325) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 20
+Shuffling atoms
+Step 21
+  Pair: 3.15 A (561,413) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 19
+Step 22
+  Pair: 3.48 A (481,230) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 18
+Step 23
+  Pair: 3.48 A (775,40) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 17
+Step 24
+  Pair: 3.50 A (535,453) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 16
+Step 25
+  Pair: 3.68 A (635,173) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 15
+Step 26
+  Pair: 3.45 A (324,135) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 14
+Step 27
+  Pair: 3.55 A (134,522) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 14
+Step 28
+  Pair: 3.66 A (595,662) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 13
+Step 29
+  Pair: 3.74 A (401,442) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 12
+Step 30
+  Pair: 3.79 A (305,473) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 11
+Step 31
+  Pair: 3.39 A (675,502) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 11
+Step 32
+  Pair: 3.35 A (575,553) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 10
+Step 33
+  Pair: 3.75 A (172,542) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 9
+Step 34
+  Pair: 3.77 A (58,562) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 8
+Step 35
+  Pair: 3.90 A (641,613) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 7
+Step 36
+  Pair: 3.99 A (248,154) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 6
+Step 37
+  Pair: 3.64 A (715,393) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 5
+Step 38
+  Pair: 3.94 A (741,582) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 4
+Step 39
+  Pair: 3.78 A (415,344) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 4
+Step 40
+  Pair: 4.34 A (210,433) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 3
+Step 41
+  Pair: 3.33 A (621,249) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 3
+Step 42
+  Pair: 3.41 A (495,287) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 2
+Step 43
+  Pair: 3.79 A (541,211) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 2
+Step 44
+  Pair: 4.14 A (655,268) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 2
+Step 45
+  Pair: 4.24 A (441,78) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 2
+Step 46
+  Pair: 3.92 A (735,673) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 2
+Step 47
+  Pair: 4.10 A (555,116) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 2
+Step 48
+  Pair: 4.50 A (761,693) (STYSULF - STYSULF)
+  Attempts: 1
+  Fragments present: 1
+Finalization:
+
+Summary
+-------
+Bonds made:                48

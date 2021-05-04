@@ -1,0 +1,245 @@
+Polymatic Simulated Polymerization
+Parameters
+----------
+Bonds per cycle:           5
+Frequency of MD type 2:    3
+Maximum bond attempts:     20
+Polymerization Loop
+-------------------
+Initialization:
+Step 0
+Step 1
+  Pair: 3.34 A (435,722)
+  Attempts: 1
+  Fragments present: 39
+Step 2
+  Pair: 3.39 A (741,582)
+  Attempts: 1
+  Fragments present: 38
+Step 3
+  Pair: 3.35 A (39,742)
+  Attempts: 1
+  Fragments present: 37
+Step 4
+  Pair: 3.39 A (343,433)
+  Attempts: 1
+  Fragments present: 36
+Step 5
+  Pair: 3.45 A (481,553)
+  Attempts: 1
+  Fragments present: 35
+Step 6
+  Pair: 3.57 A (701,473)
+  Attempts: 1
+  Fragments present: 34
+Step 7
+  Pair: 3.38 A (675,642)
+  Attempts: 1
+  Fragments present: 33
+Step 8
+  Pair: 3.48 A (248,78)
+  Attempts: 1
+  Fragments present: 32
+Step 9
+  Pair: 3.54 A (210,268)
+  Attempts: 1
+  Fragments present: 31
+Step 10
+  Pair: 3.61 A (761,573)
+  Attempts: 1
+  Fragments present: 30
+Step 11
+  Pair: 4.09 A (555,522)
+  Attempts: 1
+  Fragments present: 29
+Step 12
+  Pair: 3.56 A (305,733)
+  Attempts: 1
+  Fragments present: 28
+Step 13
+  Pair: 3.66 A (461,773)
+  Attempts: 1
+  Fragments present: 27
+Step 14
+  Pair: 4.02 A (229,21)
+  Attempts: 1
+  Fragments present: 26
+Step 15
+  Pair: 4.10 A (395,442)
+  Attempts: 1
+LAMMPS molecular dynamics did not complete properly.
+Minimising trajectory and then attempting md step again
+  Fragments present: 25
+Step 16
+  Pair: 3.04 A (535,40)
+  Attempts: 1
+  Fragments present: 24
+Step 17
+  Pair: 3.23 A (475,533)
+  Attempts: 1
+  Fragments present: 23
+Step 18
+  Pair: 3.23 A (77,693)
+  Attempts: 1
+  Fragments present: 22
+Step 19
+  Pair: 3.58 A (621,422)
+  Attempts: 1
+  Fragments present: 21
+Step 20
+  Pair: 3.19 A (421,59)
+  Attempts: 1
+  Fragments present: 20
+Step 21
+  Pair: 3.38 A (775,753)
+  Attempts: 1
+  Fragments present: 20
+Step 22
+  Pair: 3.44 A (96,673)
+  Attempts: 1
+  Fragments present: 19
+Step 23
+  Pair: 3.47 A (601,622)
+  Attempts: 1
+  Fragments present: 18
+Step 24
+  Pair: 3.46 A (495,633)
+  Attempts: 1
+  Fragments present: 17
+Step 25
+  Pair: 3.62 A (581,173)
+  Attempts: 1
+  Fragments present: 16
+Step 26
+  Pair: 3.50 A (401,713)
+  Attempts: 1
+  Fragments present: 15
+Step 27
+  Pair: 3.71 A (324,613)
+  Attempts: 1
+  Fragments present: 14
+Step 28
+  Pair: 3.94 A (381,542)
+  Attempts: 1
+  Fragments present: 13
+Step 29
+  Pair: 3.78 A (441,413)
+  Attempts: 1
+  Fragments present: 13
+Step 30
+  Pair: 3.99 A (615,2)
+  Attempts: 1
+  Fragments present: 12
+Step 31
+  Pair: 3.49 A (362,306)
+  Attempts: 1
+  Fragments present: 11
+Step 32
+  Pair: 3.91 A (172,493)
+  Attempts: 1
+  Fragments present: 11
+Step 33
+  Pair: 3.45 A (267,562)
+  Attempts: 1
+  Fragments present: 10
+Step 34
+  Pair: 3.78 A (58,593)
+  Attempts: 1
+  Fragments present: 10
+Step 35
+  Pair: 3.87 A (715,502)
+  Attempts: 1
+  Fragments present: 9
+Step 36
+  Pair: 3.16 A (115,482)
+  Attempts: 1
+  Fragments present: 8
+Step 37
+  Pair: 3.70 A (595,97)
+  Attempts: 1
+  Fragments present: 7
+Step 38
+  Pair: 3.89 A (661,135)
+  Attempts: 1
+  Fragments present: 6
+Step 39
+  Pair: 3.92 A (455,402)
+  Attempts: 1
+  Fragments present: 6
+Step 40
+  Pair: 4.07 A (286,462)
+  Attempts: 1
+  Fragments present: 5
+Step 41
+  Pair: 3.30 A (695,653)
+  Attempts: 1
+  Fragments present: 4
+Step 42
+  Pair: 4.20 A (721,211)
+  Attempts: 1
+  Fragments present: 4
+Step 43
+  Pair: 4.39 A (153,762)
+  Attempts: 1
+  Fragments present: 3
+Step 44
+  Pair: 3.73 A (575,662)
+  Attempts: 1
+  Fragments present: 3
+Step 45
+  Pair: 4.43 A (521,116)
+  Attempts: 1
+  Fragments present: 3
+Step 46
+  Pair: 3.63 A (191,287)
+  Attempts: 1
+  Fragments present: 2
+Step 47
+  Pair: 4.80 A (655,249)
+  Attempts: 1
+  Fragments present: 2
+Step 48
+  Pair: 4.65 A (641,382)
+  Attempts: 1
+  Fragments present: 2
+Step 49
+  Pair: 5.12 A (134,154)
+  Attempts: 1
+  Fragments present: 2
+Step 50
+  Pair: 5.47 A (515,453)
+  Attempts: 1
+  Fragments present: 2
+Step 51
+  Pair: 3.17 A (755,325)
+  Attempts: 1
+  Fragments present: 2
+Step 52
+  Pair: 5.56 A (1,602)
+  Attempts: 1
+  Fragments present: 2
+Step 53
+  Pair: 5.80 A (635,344)
+  Attempts: 3
+  Fragments present: 2
+Step 54
+  Pair: 5.88 A (735,393)
+  Attempts: 2
+  Fragments present: 2
+Step 55
+  Pair: 5.14 A (561,682)
+  Attempts: 3
+  Fragments present: 2
+Step 56
+  Pair: 5.77 A (681,363)
+  Attempts: 1
+  Fragments present: 2
+Step 57
+  Pair: 5.75 A (541,230)
+  Attempts: 7
+  Fragments present: 1
+Finalization:
+
+Summary
+-------
+Bonds made:                57
