@@ -22,8 +22,8 @@ Several steps are required to set up a system for use with Polymatic.
 5) Add correct partial charges (optional)
 
 Methods to achieve these steps are described below. These methods use the
-scripts inside the [setup_scripts](setup_scripts) folder, so you should add these to your `$PATH`
-variable.
+scripts inside the [setup_scripts](setup_scripts) folder, so make these scripts accessible by modifying your `$PATH` variable.
+See [example-with-detailed-setup/run.sh](example-with-detailed-setup/run.sh) for an example shell script.
 
 ## Creating a simulation box
 
