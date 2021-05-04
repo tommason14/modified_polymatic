@@ -82,13 +82,14 @@ bonds, angles or dihedrals can be found. All combinations of these types are
 then considered using the python `itertools` package, and the `gaff.ff` force
 field file is used to find the additional
 parameters.
-To do this, run `$ add_addtional_parameters.py -l pack.lmps -f gaff.ff -p polym.in`.
+To do this, run
+`$ add_addtional_parameters.py -l pack.lmps -f gaff.ff -p polym.in`.
 
 ## Creating a types.txt file
 
 Polymatic uses a types.txt file, describing the atom types involved in each
-bond, angle and dihedral. To create this file from the LAMMPS datafile, run `$
-polymatic_types.py pack.lmps > types.txt`.
+bond, angle and dihedral. To create this file from the LAMMPS datafile, run
+`$ polymatic_types.py pack.lmps > types.txt`.
 
 ## Adding partial charges (optional)
 
@@ -98,7 +99,8 @@ the datafile, and extracts charges from GAMESS geodesic log files of the same
 name as each xyz file. 
 For example, for a monomer called dvb.xyz, include a GAMESS log file 
 called dvb.log.
-Then run `$ add_correct_charges.py pack.lmps`. 
+Then run
+`$ add_correct_charges.py pack.lmps`. 
 
 # Setup process using the GAFF forcefield
 
