@@ -174,3 +174,9 @@ export LAMMPS_EXEC='ibrun lmp_stampede'
 python3 polymatic/polym_loop.py --no-minimise
 ```
 
+# After polymerisation
+
+As the polymer has been created from a low density initial system, a series of compression/decompression schemes are commonly used to increase the density to a more accurate value. A 21-step equilibration scheme was presented in the original Polymatic paper, found in [polymatic/21-step](polymatic/21-step).
+
+After the 21-step equilibration, the polymer is ready for use. 
+To convert a polymer created with the GAFF force field to gromacs, see this [repo](https://github.com/tommason14/lammps_gaff_to_gromacs). For conversion with other forcefields, [Intermol](https://github.com/shirtsgroup/InterMol) may be worth a look.
