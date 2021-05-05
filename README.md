@@ -66,6 +66,8 @@ At this point, any forcefield may be chosen. For example, if you wish to use
 OPLS, you can use this [lmp_opls_cvff.py](https://github.com/tommason14/scripts/blob/master/chem/lammps/create_opls_jobs/lmp_opls_cvff.py) script and the forcefield file [here](https://github.com/tommason14/scripts/blob/master/chem/lammps/create_opls_jobs/via-topotools), along with the python script in that folder to generate additional parameters. Note that this forcefield uses the oplsaa.ff force field distributed with
 [fftool](https://github.com/paduagroup/fftool), but with cvff improper dihedrals.
 
+> If you use a different forcefield, then make sure you change the LAMMPS files in [polymatic/scripts](polymatic/scripts) so that the correct bond, angle, dihedral, improper and pair styles are used throughout the polymerisation.
+
 Any other method of generating a LAMMPS datafile will also work here.
 
 ## Adding additional parameters
