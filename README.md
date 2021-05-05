@@ -159,7 +159,7 @@ k21  83.54565331
 k22  91.49469955
    ```
    In this example, the reaction between two styrene sulfonate monomers
-   has a free energy barrier of 77.70 kJ/mol, while the energy barrier to two
+   has a free energy barrier of 77.71 kJ/mol, while the energy barrier to two
    divinylbenzene units reacting is 91.49 kJ/mol.
 
    Then add a `--controlled` flag in the call to
