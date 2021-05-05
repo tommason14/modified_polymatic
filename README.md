@@ -141,10 +141,11 @@ Polymatic is run by using this [polym_loop.py](polymatic/polym_loop.py) file.
 Several options can be supplied. 
 
 1. By default, a minimisation of the pack.lmps file is performed, then a
-   random polymer is formed
-2. To use the original packmol-generated file with no minimisation, rename
-   pack.lmps to data.lmps and add a `--no-minimise` flag
-3. If you are forming a co-polymer and wish to control how the polymer is
+   random polymer is formed.
+2. To retain files for each polymerisation step, add a `--keep` flag.
+3. To use the original packmol-generated file with no minimisation, rename
+   pack.lmps to data.lmps and add a `--no-minimise` flag.
+4. If you are forming a co-polymer and wish to control how the polymer is
    formed, create a file of free energy barriers of each propagation step 
    and name it `barriers.in`. 
    For example: 
@@ -157,11 +158,14 @@ k12  77.68702204
 k21  83.54565331
 k22  91.49469955
    ```
-   
+   In this example, the reaction between two styrene sulfonate monomers
+   has a free energy barrier of 77.70 kJ/mol, while the energy barrier to two
+   divinylbenzene units reacting is 91.49 kJ/mol.
+
    Then add a `--controlled` flag in the call to
    `polym_loop.py`.
    After all of one type of monomer has been consumed, a 20 ps NVT run at 900 K
-   is performed to shuffle the system, using `polymatic/scripts/shuffle.in`. To
+   is performed to rearrange the molecules, using `polymatic/scripts/shuffle.in`. To
    turn off this behaviour, add the `--controlled --no-shuffle` flags.
 
 Lastly, the LAMMPS executable is defined using a `LAMMPS_EXEC` environmental
