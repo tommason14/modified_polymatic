@@ -53,27 +53,31 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--no-minimise",
-    help="By default, minimsisation of pack.lmps is performed. If you already have a data.lmps file that "
+    help=
+    "By default, minimsisation of pack.lmps is performed. If you already have a data.lmps file that "
     "you do not want to minimise, pass in this flag",
     action="store_true",
 )
 parser.add_argument(
     "--no-shuffle",
-    help="By default, an NVT MD step is performed after all of one monomer has been consumed, as early "
+    help=
+    "By default, an quick NVT MD simulation is performed after all of one monomer has been consumed, as early "
     "tests showed this to be necessary for polymerisation to progress. Turn off this behaviour by "
     "using this flag",
     action="store_true",
 )
 parser.add_argument(
     "--controlled",
-    help="Pass in this flag to used a modified version of the Polmatic code that accounts for free "
+    help=
+    "Pass in this flag to used a modified version of the Polmatic code that accounts for free "
     "energy barriers of each possible reaction, stored in a barriers.in file. A file containing "
     "molecule IDs is also required, named moleculeID.txt",
     action="store_true",
 )
-parser.add_argument(
-    "-k", "--keep", help="Retain folders of each intermediate step", action="store_true"
-)
+parser.add_argument("-k",
+                    "--keep",
+                    help="Retain folders of each intermediate step",
+                    action="store_true")
 args = parser.parse_args()
 
 # Parameters
@@ -192,7 +196,8 @@ def polym_step():
         if code == 0:
             print(f"  Attempts: {attempts}")
             if not os.path.isfile("data.lmps"):
-                err_exit("Polymerization step script did not complete properly.")
+                err_exit(
+                    "Polymerization step script did not complete properly.")
             return 0
 
         # No pair found
@@ -200,7 +205,9 @@ def polym_step():
 
             # Stop if maximum attempts reached
             if attempts > md_max:
-                print("  No pair was found within the maximum number of attempts.")
+                print(
+                    "  No pair was found within the maximum number of attempts."
+                )
                 bonds -= 1
                 os.chdir("..")
                 if not args.keep:
@@ -254,9 +261,15 @@ def polym_init():
             num_attempts += 1
             if num_attempts == 5:
                 # limit number of restarts- if simulation reaches here, bad starting trajectory
-                sys.exit("Incorrect structure- try changing the initial box dimensions")
-            print("Polymerization initialization script did not complete properly.")
-            print("Minimising trajectory and then attempting initialisation step again")
+                sys.exit(
+                    "Incorrect structure- try changing the initial box dimensions"
+                )
+            print(
+                "Polymerization initialization script did not complete properly."
+            )
+            print(
+                "Minimising trajectory and then attempting initialisation step again"
+            )
             os.mkdir("restart")
             shutil.copy("data.lmps", "restart/data.lmps")
             shutil.copy("../scripts/restart_min.in", "restart/min.in")
@@ -273,8 +286,7 @@ def polym_init():
             sys.stdout.flush()
             code = subprocess.call(cmd, shell=True)
             successful = os.path.isfile(
-                "md.lmps"
-            )  # if not, then it will keep minimising
+                "md.lmps")  # if not, then it will keep minimising
 
 
 def polym_final():
@@ -286,7 +298,8 @@ def polym_final():
     else:
         shutil.copy("temp.lmps", "final.lmps")
     if code != 0 or not os.path.isfile("final.lmps"):
-        err_exit("Polymerization finalization script did not complete properly.")
+        err_exit(
+            "Polymerization finalization script did not complete properly.")
     os.remove("temp.lmps")
 
 
@@ -335,7 +348,9 @@ def md(num):
             num_attempts += 1
             if num_attempts == 5:
                 # limit number of restarts- if simulation reaches here, bad starting trajectory
-                sys.exit("Incorrect structure- try changing the initial box dimensions")
+                sys.exit(
+                    "Incorrect structure- try changing the initial box dimensions"
+                )
             print("LAMMPS molecular dynamics did not complete properly.")
             print("Minimising trajectory and then attempting md step again")
             os.mkdir("restart")
@@ -353,8 +368,7 @@ def md(num):
             cmd = f"{lmps} -i {inp}"
             code = subprocess.call(cmd, shell=True, stdout=open("out", "w"))
             successful = os.path.isfile(
-                "md.lmps"
-            )  # if not, then it will keep minimising
+                "md.lmps")  # if not, then it will keep minimising
 
     # Data file
     if num == 0:
@@ -484,28 +498,38 @@ def run_shuffle():
 
 
 def write_vmd_frag_file():
-    cmds = ["package require topotools\n", "topo readlammpsdata temp.lmps\n", "exit"]
+    cmds = [
+        "package require topotools\n", "topo readlammpsdata temp.lmps\n",
+        "exit"
+    ]
     with open("read_data.tcl", "w") as f:
         f.writelines(cmds)
 
 
 def frags_from_vmd():
     cmd = "vmd -dispdev text -e read_data.tcl 2> /dev/null | grep Fragments | awk '{print $3}'"
-    return int(subprocess.check_output(cmd, shell=True).decode("utf-8").split("\n")[0])
+    return int(
+        subprocess.check_output(cmd,
+                                shell=True).decode("utf-8").split("\n")[0])
 
 
 def frags_from_data_lmps():
     """
     Only happens on first step
     """
-    cmds = ["package require topotools\n", "topo readlammpsdata data.lmps\n", "exit"]
+    cmds = [
+        "package require topotools\n", "topo readlammpsdata data.lmps\n",
+        "exit"
+    ]
     with open("tmp.tcl", "w") as f:
         f.writelines(cmds)
 
     cmd = (
         "vmd -dispdev text -e tmp.tcl 2> /dev/null | grep Fragments | awk '{print $3}'"
     )
-    ret = int(subprocess.check_output(cmd, shell=True).decode("utf-8").split("\n")[0])
+    ret = int(
+        subprocess.check_output(cmd,
+                                shell=True).decode("utf-8").split("\n")[0])
     os.system("rm tmp.tcl")
     return ret
 
