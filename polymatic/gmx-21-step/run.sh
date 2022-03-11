@@ -74,6 +74,6 @@ ibrun mdrun_mpi -s 20.tpr -deffnm 20 -g 20.log
 gmx grompp -f 21.mdp -c 20.gro -t 20.cpt -p ../topol.top -o 21.tpr -maxwarn 2
 ibrun mdrun_mpi -s 21.tpr -deffnm 21 -g 21.log
 
-# get a structure to use in the desalination setup
+# get a structure for futher use
 echo 0 | gmx trjconv -f 21.cpt -s 21.tpr -o last_step.gro
 echo 0 | gmx trjconv -f 21.cpt -s 21.tpr -o last_step_unwrapped.gro -pbc mol
