@@ -6,8 +6,6 @@
 #SBATCH -n 1
 #SBATCH -p skx-dev
 #SBATCH -t 2:00:00
-# #SBATCH --mail-user=thomas.mason1@monash.edu
-# #SBATCH --mail-type=all
 
 export OMP_NUM_THREADS=48
 
