@@ -8,7 +8,6 @@ Github: https:github.com/tommason14
 Description: Search pack.inp for the required number of atoms, and takes in a GAMESS
 geodesic charge log file of the monomer(s) used to create the lammps system.
 """
-from autochem import read_file, eof
 import os
 from glob import glob
 import subprocess as sp
