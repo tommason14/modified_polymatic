@@ -24,6 +24,33 @@ if len(sys.argv) == 2:
 else:
     output = sys.argv[2]
 
+def read_file(file):
+    with open(file, "r") as f:
+        try:
+            for line in f:
+                yield line
+        except UnicodeDecodeError:
+            pass
+
+def eof(file, percFile):
+    # OPEN IN BYTES
+    with open(file, "rb") as f:
+        f.seek(0, 2)  # Seek @ EOF
+        fsize = f.tell()  # Get size
+        Dsize = int(percFile * fsize)
+        f.seek(max(fsize - Dsize, 0), 0)  # Set pos @ last n chars lines
+        lines = f.readlines()  # Read to end
+
+    # RETURN DECODED LINES
+    for i in range(len(lines)):
+        try:
+            lines[i] = lines[i].decode("utf-8")
+        except:
+            lines[i] = "CORRUPTLINE"
+            print("eof function passed a corrupt line in file ", file)
+        # FOR LETTER IN SYMBOL
+    return lines
+    
 def find_structures():
     # map structures to numbers of each
     structs = (
