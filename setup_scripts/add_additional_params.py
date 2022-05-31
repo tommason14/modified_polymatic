@@ -13,7 +13,6 @@ Warning: this file runs very inefficiently! Use it on a small system, maybe a fe
 molecules to generate the required additional parameters, then copy them into the
 datafile of the larger system.
 """
-from autochem import read_file
 import itertools
 import sys
 import re
@@ -45,6 +44,13 @@ def get_args():
         sys.exit(parser.print_help())
     return args
 
+def read_file(file):
+    with open(file, "r") as f:
+        try:
+            for line in f:
+                yield line
+        except UnicodeDecodeError:
+            pass
 
 def linker_atom_types(datafile, polym="polym.in", ff="gaff.ff"):
     atoms_to_consider = []
